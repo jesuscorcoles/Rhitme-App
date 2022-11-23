@@ -2,9 +2,11 @@ import './App.scss';
 
 function App() {
   return (
+  
     <div>
-      
-    </div>
+        <p>holi</p>
+    </div>     
+     
   );
 }
 
