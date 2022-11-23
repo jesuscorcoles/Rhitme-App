@@ -1,5 +1,11 @@
 .general{
-    // background-color: #3F3B6C;
+    background-color: #3F3B6C;
+}
+
+.header{
+    background-color: yellow;
+    width: 100%;
+    height: 65px;
 }
 
 .h1{
@@ -15,6 +21,7 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     border: solid 1px red;
+    margin-top: 6%;
 }
 
 .botonhome{
@@ -23,6 +30,7 @@
     border-radius: 15px;
     background-color: #9F73AB;
     color: white;
+    border: none;
 }
 
 .titulos{
@@ -59,7 +67,7 @@
 
 .divcompleto{
     width: 100%;
-    border: solid 1px blue;
+    border: solid 1px greenyellow;
     height: 20vh;
     margin-bottom: 5px;
 }

@@ -5,6 +5,7 @@ import './HomePage.scss';
 const HomePage = () => {
   return (
     <div className='general'>
+        <header className='header'></header>
         <div className='grupobotones'>
             <button className='botonhome'>Conciertos</button>
             <button className='botonhome'>Amigos</button>
