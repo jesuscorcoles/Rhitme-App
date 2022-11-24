@@ -4,7 +4,13 @@ import './EventoSeleccionado.scss';
 
 const EventoSeleccionado = () => {
   return (
-    <div>EventoSeleccionado</div>
+    <div>
+      <header className='header'><p className='headertext'>Entradas</p></header>
+
+      <div>
+        
+      </div>
+    </div>
   )
 }
 

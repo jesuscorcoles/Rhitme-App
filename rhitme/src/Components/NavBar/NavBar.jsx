@@ -8,32 +8,31 @@ const NavBar = () => {
     <div className='menu'>
       <div className='boxesMenu'>
 
-
-        <div className='iconAndText'>
+        
+        <Link className='iconAndText' to="/entradas">
         <img className='icons' src='/entradas.png'></img>
-        <Link className='itemsMenu' to="/entradas">Entradas</Link>
-        </div>
+        <p className='textMenu'>Entradas</p>
+        </Link>
 
-        <div className='iconAndText'>
+        <Link className='iconAndText' to="/buscar">
         <img className='icons' src='/lupa.png'></img>
+        <p className='textMenu'>Buscar</p>
+        </Link>
 
-        <Link className='itemsMenu' to="/">Buscar</Link>
-        </div>
-
-        <div className='iconAndText'>
+        <Link className='iconAndText' to="/">
         <img className='icons' src='/estrella.png'></img>
-        <Link className='itemsMenu' to="/">Home</Link>
-        </div>
+        <p className='textMenu'>Home</p>
+        </Link>
 
-        <div className='iconAndText'>
+        <Link className='iconAndText' to="/myconcerts">
         <img className='icons' src='/corchea-musical.png'></img>
-        <Link  className='itemsMenu itemsMenu--larges' to="/">Mis Conciertos</Link>
-        </div>
+        <p className='textMenu'>Mis Conciertos</p>
+        </Link>
 
-        <div className='iconAndText'>
+        <Link className='iconAndText' to="/configuration">
         <img className='icons' src='/engranaje.png'></img>
-        <Link  className='itemsMenu' to="/">Configuración</Link>
-        </div>
+        <p className='textMenu'>Configuración</p>
+        </Link>
 
       </div>
     </div>

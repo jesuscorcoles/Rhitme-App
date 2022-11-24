@@ -1,0 +1,70 @@
+.genBox{
+    // border: 0.5px solid wheat;
+    width: 100%;
+ 
+}
+
+.eventBox{
+    display: flex;
+    
+}
+
+.date{
+    font-size: 25px;
+    color: white;
+    margin: 20px;
+}
+
+.img{
+    width: 100px;
+    height: 100px;
+    // border: 0.5px solid rgb(82, 67, 39);
+    margin: 0px 20px 20px 20px;
+    
+}
+
+.singerName{
+    font-size: 20px;
+    color: rgb(217, 184, 0);
+}
+
+.place{
+    font-size: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    // border: 0.5px solid gold;
+    color: rgb(255, 255, 255);
+}
+
+.nameAndButton{
+    // border: 0.5px solid rgb(89, 0, 255);
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.btn{
+    width: 70px;
+    height: 30px;
+    margin-left: 50px;
+    border-radius: 50px;
+    background-color: #383462;
+    border-color: rgb(217, 184, 0);
+    border-style: solid; 
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.695);
+    
+}
+
+.infoBox{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    // border: 0.5px solid gold;
+    font-size: 10px;
+    justify-content: space-between;
+    color: white; 
+}
