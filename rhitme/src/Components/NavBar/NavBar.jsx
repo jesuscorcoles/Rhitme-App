@@ -8,13 +8,15 @@ const NavBar = () => {
     <div className='menu'>
       <div className='boxesMenu'>
 
+
         <div className='iconAndText'>
         <img className='icons' src='/entradas.png'></img>
-        <Link className='itemsMenu' to="/">Entradas</Link>
+        <Link className='itemsMenu' to="/entradas">Entradas</Link>
         </div>
 
         <div className='iconAndText'>
         <img className='icons' src='/lupa.png'></img>
+
         <Link className='itemsMenu' to="/">Buscar</Link>
         </div>
 
