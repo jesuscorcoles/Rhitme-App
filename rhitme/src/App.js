@@ -1,6 +1,6 @@
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import './App.scss';
-import NavBar from "./Components/NavBar/NavBar";
+// import NavBar from "./Components/NavBar/NavBar";
 import CompraEfectuada from "./Pages/Entradas/CompraEfectuada/CompraEfectuada";
 import ComprarEntrada1 from "./Pages/Entradas/ComprarEntrada1/ComprarEntrada1";
 import ComprarEntrada2 from "./Pages/Entradas/ComprarEntrada2/ComprarEntrada2";
@@ -33,7 +33,7 @@ function App() {
     <Router>
 
       <div className='general'>
-        <NavBar></NavBar>
+        {/* <NavBar></NavBar> */}
        
         <Routes>
         
@@ -44,8 +44,8 @@ function App() {
           <Route path="/conciertos" element={<Conciertos></Conciertos>}></Route>
           <Route path="/entradas" element={<MenuEntradaPage></MenuEntradaPage>}></Route>
           <Route path="/eventoseleccionado" element={<EventoSeleccionado></EventoSeleccionado>}></Route>
-          <Route path="/compraentrada1" element={<ComprarEntrada1></ComprarEntrada1>}></Route>
-          <Route path="/compraentrada2" element={<ComprarEntrada2></ComprarEntrada2>}></Route>
+          <Route path="/comprarentrada1" element={<ComprarEntrada1></ComprarEntrada1>}></Route>
+          <Route path="/comprarentrada2" element={<ComprarEntrada2></ComprarEntrada2>}></Route>
           <Route path="/compraefectuada" element={<CompraEfectuada></CompraEfectuada>}></Route>
           <Route path="/ticketdetail" element={<TicketDetail></TicketDetail>}></Route>
           <Route path="/a4" element={<A4></A4>}></Route>

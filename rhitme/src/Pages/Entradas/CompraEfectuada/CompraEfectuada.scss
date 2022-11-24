@@ -1,0 +1,24 @@
+.compraefectuada{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 17%;
+    color: white;
+}
+
+.agrupatexto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vh;
+}
+
+.boton{
+    width: 62%;
+    height: 6vh;
+    border-radius: 25px;
+    margin-top: 6vh;
+    margin-bottom: 3vh;
+}

@@ -1,0 +1,74 @@
+.fotocomprarentrada1{
+    width: 100%;
+    height: 7vh;
+    border: solid 1px orange;
+    padding-top: 20vh;
+    margin-bottom: 2vh;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.imagenpequeña{
+    border: solid 1px yellow;
+    width: 13%;
+    height: 75%;
+    margin-right: 5%;
+    margin-bottom: 1vh;
+    border-radius: 10px;
+}
+
+.comprarentradagrande{
+    padding-left:7%;
+    padding-right:7%;
+    padding-top: 24%;
+    // border: 1px solid red;
+    color: white;
+}
+
+.sala{
+    padding-left:7%;
+    padding-right:7%;
+    color: white;
+    line-height: 4vh;
+    width: 100%;
+}
+
+.alineado{
+    height: 100%;
+    padding-left:7%;
+    padding-right:7%;
+    line-height: 3.5vh;
+    color: white;
+}
+
+.mapa{
+    border: solid 1px yellow;
+    border-radius: 15px;
+    margin-top: 2vh;
+    height: 18vh;
+}
+
+.precioyboton{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.comprarahora{
+    margin-top: 3vh;
+    width: 20vh;
+    height: 6vh;
+    background-color: yellow;
+    border-radius: 15px;
+}
+
+.precio{
+    margin-top: 3vh;
+    margin-right: 3vh;
+}
+
+.background{
+    background-color: #3F3B6C;
+    height: 100vh;
+}

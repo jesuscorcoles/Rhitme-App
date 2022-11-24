@@ -4,7 +4,14 @@ import './ComprarEntrada2.scss';
 
 const ComprarEntrada2 = () => {
   return (
-    <div>ComprarEntrada2</div>
+    <div className='generalentradas2 general'>
+      <header className='header'></header>
+
+
+        <div className='grandeentrada2'>
+
+        </div>
+    </div>  
   )
 }
 
