@@ -29,10 +29,11 @@ function App() {
   return (
     <Router>
 
-      <div>
-
+      <div className='general'>
         <NavBar></NavBar>
+       
         <Routes>
+        
           <Route path="/" element={<HomePage></HomePage>}></Route>
           <Route path="/conciertos" element={<Conciertos></Conciertos>}></Route>
           <Route path="/entradas" element={<MenuEntradaPage></MenuEntradaPage>}></Route>
@@ -56,6 +57,7 @@ function App() {
           <Route path="/registrofanclub2" element={<RegistroFanClub2></RegistroFanClub2>}></Route>
           <Route path="/sincronizacionstreaming" element={<SincronizarStreaming></SincronizarStreaming>}></Route>
           <Route path="/tourtickets" element={<TourTickets></TourTickets>}></Route>
+
         </Routes>
 
           </div>
