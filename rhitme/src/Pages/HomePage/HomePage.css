@@ -1,0 +1,76 @@
+.header {
+  background-color: #FFC18E;
+  width: 100%;
+  height: 65px;
+  position: fixed;
+  top: 0%;
+}
+
+.h1 {
+  color: #A3C7D6;
+}
+
+.h3 {
+  color: white;
+}
+
+.grupobotones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.botonhome {
+  width: 30%;
+  height: 40px;
+  border-radius: 15px;
+  background-color: #CA4E79;
+  color: white;
+  border: none;
+  margin-top: 15vh;
+}
+
+.titulos {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5vh;
+  margin-bottom: 8vh;
+}
+
+.h4 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: white;
+}
+
+.secction2 {
+  width: 100%;
+  border: solid 0.5px #3F3B6C;
+}
+
+.galeria {
+  height: 75%;
+  margin-top: 1%;
+  display: flex;
+}
+
+.individual {
+  border: solid 1px red;
+  width: 20%;
+  height: 80%;
+  margin-top: 2%;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.divcompleto {
+  width: 100%;
+  height: 20vh;
+  margin-bottom: 5px;
+}
+.divcompleto--last {
+  margin-bottom: 60px;
+}/*# sourceMappingURL=HomePage.css.map */

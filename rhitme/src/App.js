@@ -7,15 +7,15 @@ function App() {
   return (
     <Router>
 
-      <div>
+      <div className='general'>
         <div>
 
         <NavBar></NavBar>
-      
+        <HomePage></HomePage>
 
         <Routes>
 
-        <Route exact path="/"><HomePage></HomePage></Route>
+        <Route exact path="/"></Route>
 
         </Routes>
 

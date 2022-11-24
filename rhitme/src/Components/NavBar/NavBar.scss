@@ -4,31 +4,47 @@
     justify-content: space-around;
     width: 100%;
     height: 60px;
-    border: solid black;
+    // border: solid black;
     bottom: 0%;
     position: fixed;
+    background-color: #312d59;
 }
 
 .boxesMenu{
-    width: 100%;
     display: flex;
-    padding: 5px;
-    border: solid rgb(141, 116, 116);
+    
+    // border: solid rgb(141, 116, 116);
     justify-content: space-around;
     align-items: center;
+    
 }
 
 .itemsMenu{
     font-family: sans-serif;
-    font-size: 10px;
+    font-size: 9px;
     text-decoration: none;
     color: black;
-    border: solid goldenrod;
+    // border: solid goldenrod;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
+.iconAndText{
+    // border: solid rgb(106, 81, 18);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 50px;
+    
+}
+
+.icons{
+    width: 17px;
+    margin-bottom: 5px;
+}
 
 
