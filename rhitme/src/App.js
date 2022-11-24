@@ -24,6 +24,9 @@ import RegistroFanClub2 from "./Pages/Conciertos/RegistroFanClub2/RegistroFanClu
 import SincronizarStreaming from "./Pages/Conciertos/SincronizarStreaming/SincronizarStreaming";
 import TourTickets from "./Pages/Conciertos/TourTickets/TourTickets";
 import Conciertos from "./Pages/Entradas/Conciertos/Conciertos";
+import SearchPage from "./Pages/SearchPage/SearchPage";
+import MyConcertsPage from "./Pages/MyConcertsPage/MyConcertsPage";
+import ConfigurationPage from "./Pages/ConfigurationPage/ConfigurationPage";
 
 function App() {
   return (
@@ -35,6 +38,9 @@ function App() {
         <Routes>
         
           <Route path="/" element={<HomePage></HomePage>}></Route>
+          <Route path="/buscar" element={<SearchPage></SearchPage>}></Route>
+          <Route path="/myconcerts" element={<MyConcertsPage></MyConcertsPage>}></Route>
+          <Route path="/configuration" element={<ConfigurationPage></ConfigurationPage>}></Route>
           <Route path="/conciertos" element={<Conciertos></Conciertos>}></Route>
           <Route path="/entradas" element={<MenuEntradaPage></MenuEntradaPage>}></Route>
           <Route path="/eventoseleccionado" element={<EventoSeleccionado></EventoSeleccionado>}></Route>
