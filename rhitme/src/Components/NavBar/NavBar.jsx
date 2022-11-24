@@ -8,7 +8,7 @@ const NavBar = () => {
     <div className='menu'>
       <div className='boxesMenu'>
 
-        <Link className='itemsMenu' to="/">Entradas</Link>
+        <Link className='itemsMenu' to="/entradas">Entradas</Link>
         <Link className='itemsMenu' to="/">Buscar</Link>
         <Link className='itemsMenu' to="/">Home</Link>
         <Link  className='itemsMenu itemsMenu--larges' to="/">Mis Conciertos</Link>
