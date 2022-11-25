@@ -3,8 +3,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 17%;
+    padding-top: 0%;
     color: white;
+    height: 65vh;
+    @media (min-width:678px){
+        padding-top: 0%;
+        height: 90vh;
+    }
 }
 
 .agrupatexto{
@@ -13,6 +18,10 @@
     justify-content: center;
     align-items: center;
     margin-top: 3vh;
+    @media (min-width:678px){
+        font-size: 30px;
+        margin-bottom: 5vh;
+    }
 }
 
 .boton{
@@ -21,4 +30,49 @@
     border-radius: 25px;
     margin-top: 6vh;
     margin-bottom: 3vh;
+    @media (min-width:678px){
+        margin-bottom: 6vh;
+        width: 30%;
+        font-size: 20px;
+    }
+}
+
+.h4compraefectuada{
+    background-color: transparent;
+        border-style: none;
+        color: white;
+    @media (min-width:678px){
+        font-size: 30px;
+        margin-bottom: 7vh;
+        background-color: transparent;
+        border-style: none;
+        color: white;
+    }
+}
+
+.backgroundefectuada{
+    background-color: #3F3B6C;
+    height: 100vh;
+}
+
+.botoncierre{
+    width: 6%;
+    margin-right: 6%;
+     @media (min-width:678px){
+    width: 4%;
+    }
+}
+    
+.colocacioncierre{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 6%;
+    @media (min-width:678px){
+    padding-top: 3%;
+    }
+}  
+
+.generalcompraefectuada{
+    display: flex;
+    flex-direction: column;
 }
