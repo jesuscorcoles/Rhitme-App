@@ -1,9 +1,10 @@
 import React from 'react'
+import './Back.scss';
 
 const Back = () => {
   return (
-    <div>
-        <img src='/left.png'></img>
+    <div className='btnBox'>
+        <img className='bck' src='/left.png'></img>
     </div>
   )
 }

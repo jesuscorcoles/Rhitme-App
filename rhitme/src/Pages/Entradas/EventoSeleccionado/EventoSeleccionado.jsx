@@ -1,18 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import Back from '../../../Components/Back/Back';
-import BotonCierre from '../../../Components/BotonCierre/BotonCierre';
 import NavBar from '../../../Components/NavBar/NavBar';
 import './EventoSeleccionado.scss';
 
 
-const EventoSeleccionado = () => {
+export default function EventoSeleccionado () {
+
+  const [concerts, setConcerts] = useState ();
+
+
   return (
     <div>
+
+      
       <NavBar></NavBar>
-    
+      
       <header className='header'>
-      <p className='headertext'>Entradas</p>
-      <Back></Back>
+        <Link to="/entradas"><Back></Back></Link>
+        <p>Entradas</p>
+        <div className='btnBox'></div>
+        
+
       </header>
       
       <div className='allContent'>
@@ -49,7 +58,7 @@ const EventoSeleccionado = () => {
         </div>
 
         <div className='buttonsBox'>
-          <button className='button'>Comprar</button> 
+        <button className="comprarahora comprarahora--botonComprar">Comprar</button>
           {/* sustituir por componenete boton alberto */}
           <button className='button'>Compartir</button> 
         </div>
@@ -83,5 +92,3 @@ const EventoSeleccionado = () => {
     </div>
   )
 }
-
-export default EventoSeleccionado

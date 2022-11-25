@@ -9,7 +9,9 @@ const HomePage = () => {
         <NavBar></NavBar>
         <div className='general'>
 
-            <header className='header'></header>
+        <header className='header header--normal'>
+        <p>RithMe</p>
+        </header>
 
             <div className='grupobotones'>
                 <button className='botonhome'>Conciertos</button>

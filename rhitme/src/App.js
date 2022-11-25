@@ -28,6 +28,8 @@ import SearchPage from "./Pages/SearchPage/SearchPage";
 import MyConcertsPage from "./Pages/MyConcertsPage/MyConcertsPage";
 import ConfigurationPage from "./Pages/ConfigurationPage/ConfigurationPage";
 
+// http://localhost:9004
+
 function App() {
   return (
     <Router>

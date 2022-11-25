@@ -1,4 +1,5 @@
 import React from 'react'
+import NavBar from '../../../Components/NavBar/NavBar';
 import ConcertsAvailable from './ConcertsAvailable/ConcertsAvailable';
 import './MenuEntradaPage.scss';
 
@@ -21,6 +22,7 @@ const MenuEntradaPage = () => {
           <div slider con conciertos disponibles en ese date>
           <ConcertsAvailable></ConcertsAvailable>
           </div>
+          <NavBar></NavBar>
         </div>
    
     </div>
