@@ -1,0 +1,13 @@
+.generalentradas2 {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-bottom: 15%;
+}
+
+.grandeentrada2 {
+  background-color: red;
+  width: 90%;
+  height: 150px;
+  margin-top: 10%;
+}/*# sourceMappingURL=ComprarEntrada2.css.map */

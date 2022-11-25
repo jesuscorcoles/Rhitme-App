@@ -2,12 +2,114 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
-    margin-bottom: 15%;
 }
 
 .grandeentrada2{
-    background-color: red;
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    margin-top: 13vh;
+}
+
+.cabecera{
+    width: 100%;
+    height: 10vh;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6%;
+}
+
+.cabeceraentrada2{
+    width: 100%;
+    // background-color: red;
+    padding-bottom: 4vh;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 20px;
+}
+
+.inputcomprarentrada2{
+    width: 100%;
+    height: 5vh;
+    margin-left: 3vh;
+    margin-right: 3vh;
+    padding-left: 1%;
+
+}
+
+.alinea{
+    margin-left: 3vh;
+    margin-right: 3vh;
+}
+.h4compraentradas2{
     width: 90%;
-    height: 150px;
-    margin-top: 10%;
+    margin-bottom: 2vh;
+    margin-top: 3vh;
+    margin-left: 3vh;
+    margin-right: 3vh;
+}
+
+.compraentradas2{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    // border: solid 2px blue;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.datoscompraentradas2{
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+    margin-left: 3vh;
+
+}
+
+.h5comprarentrada2{
+    margin-top: 3vh;
+    font-weight: 100;
+    margin-left: 3vh;
+
+}
+
+.separador{
+    width: 95%;
+    border-bottom: 1px solid black;
+    opacity: 25%;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-left: 3vh;
+    margin-right: 3vh;
+}
+
+.separaciondatos{
+    margin-bottom: 2vh;
+}
+
+.datostarjeta{
+    width: 45%;
+    height: 5vh;
+    margin-bottom: 2vh;
+    padding-left: 1%;
+}
+
+.divtarjeta{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.botoncomprarentrada2{
+    width: 100%;
+    height: 6vh;
+    margin-left: 3vh;
+    margin-right: 3vh;
+    margin-bottom: 4%;
+    margin-top: 2%;
+    border-radius: 15px;
+    background-color: yellow;
 }
