@@ -7,19 +7,20 @@ const ComprarEntrada1 = () => {
   return (
     <div>
       <NavBar></NavBar>
-      <div className="general">
-        <header className='header'></header>
+      <header className='header'></header>
+      <div className="generalentradas1">
           <div className="comprarentradagrande">
             <div className="fotocomprarentrada1">
               <div className="imagenpequeña">
 
               </div>
             </div>
-            <h1>Judith Hill</h1>
           </div>
           
-          <div>
+          <div className='agrupacionmapa'>
             <div className="alineado">
+            <h1 className='h1entradas1'>Judith Hill</h1>
+
               <h4>en SALA CLAMORES</h4>
               <h5>Calle de...</h5>
               <div className="mapa">
