@@ -1,5 +1,102 @@
+.allContent{
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    // flex-direction: column;
+    justify-content: center;
+}
 
+.eventDateImg{
+    width: 80%;
+    height: 150px;
+    margin-top: 10px;
+    background-color: yellow;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+}
 
-.singerInfo{
+.singerImg{
+    width: 50%;
+    height: 100%;
+    background-color: aqua;
+}
 
+.infobox{
+    width: 50%;
+    // border: solid rgb(128, 240, 173);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.textSing{
+    font-size: 10px;
+    margin-left: 10px;
+    &--title{
+        margin-bottom: 15px;
+        margin-top: 15px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+.infoBajo{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.hourAndLike{
+    width: 100%;
+    height: 10%;
+    
+}
+
+.iconAndHour{
+    display: flex;
+    font-size: 15px;
+}
+.miniIcons{
+    width: 15px;
+    margin-left: 7px;
+    margin-right: 7px;  
+    
+    &--small{
+        margin-top: 10px;
+    }
+}
+
+.like{
+    width: 30px;
+    margin-right: 10px;
+}
+
+.buttonsBox{
+    display: flex;
+    width: 80%;
+    height: 40px;
+    margin-top: 30px;
+}
+
+.button{
+    width: 90px;
+    margin-right: 10px;
+    border-radius: 50px;
+}
+
+.infoConcert{
+    border: solid salmon;
+    width: 80%;
+    margin-top: 30px;
+
+    &--infoLarge{
+        margin-bottom: 100px;
+    }
+}
+
+.asisten{
+    margin-left: 28px;
+    margin-top: 10px;
 }
