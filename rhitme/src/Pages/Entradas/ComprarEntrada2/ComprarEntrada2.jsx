@@ -1,6 +1,6 @@
 import React from 'react'
 import './ComprarEntrada2.scss';
-import { CascadeSelect } from 'primereact/cascadeselect';
+// import { CascadeSelect } from 'primereact/cascadeselect';
 
 
 const ComprarEntrada2 = () => {

@@ -38,6 +38,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 10px;
     color: #CEE5D0;
 }
 
@@ -51,15 +52,20 @@
     height: 75%;
     margin-top: 1%;
     display: flex;
+    overflow: scroll;
+    
+    
 }
 
 .individual{
-    border: solid 1px red;
-    width: 20%;
-    height: 80%;
+    // border: solid 1px red;
+    width: 80px;
+    height: 80px;
     margin-top: 2%;
     margin-left: 1%;
-    margin-right: 1%;
+    margin-right: 5px;
+    overflow: hidden;
+    
 }
 
 .divcompleto{
@@ -71,4 +77,8 @@
     &--last{
         margin-bottom: 60px;
     }
+}
+
+.singerPhoto{
+    width: 100;
 }
