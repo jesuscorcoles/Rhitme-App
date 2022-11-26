@@ -6,52 +6,60 @@ import { Link } from 'react-router-dom'
 
 export default function ConcertsAvailable () {
 
-    const [allSingers, setAllSingers]= useState([]);
+    const [singers, setSingers] = useState()
+    // const [salas, setSalas] = useState()
 
-    
     useEffect(() => {
-        const getSinger = async () => {
-            const {data} = await axios.get (``);
-            setAllSingers(data);
-            
-        };
+        const getSingers = async () => {
+            const pepe = await axios.get(`http://localhost:9007/artists`);
+            setSingers(pepe.data);
+        }
+        getSingers();
 
-        getSinger();
+    }, [])
 
-    }, []);
 
     return (
         <div className='genBox'>
 
-                <div className='date'> 8 Diciembre 2022</div>
-
-                <div className='eventBox'>
-
-                    
-                    <img className='img' src='/fotoprueba.png'></img>
-
-                    <div>
-                        <div className='place'><p>Lugar del concierto/Ciudad</p></div>
-
-                        <div className='nameAndButton'>
-                            <div className='singerName'>Cantonto</div>
-                           <Link  to="/eventoseleccionado"> <button className='btn'>Comprar</button></Link>
-                        </div>
-
-                        <div className='place' >Genero</div>
-
-                        <div className='infoBox'>
-                            <p>12 asistirán</p>
-                            <p>4 amigos</p>
-                            <p>25€</p>
-                        </div>
-
-                    </div>
-
-                    
-                </div>
+            <div>
             
+                {singers?.map((singer, index) => {
 
-        </div>
+                    return(
+                        <div>  
+                            <div className='date'>{singer.concerts.date}</div>
+                            <div key={index} className="eventBox">
+
+
+                                <div className='imgBox'>
+                                    <img className='img' src={singer.image}></img>
+                                </div>
+
+                                <div>
+                                <div className='place'>{singer.halls.name}</div>
+
+
+                                <div className='singerName'>{singer.name}</div>
+
+                                <Link  to="/eventoseleccionado"> <button className='btn'>Info</button></Link>
+                                
+                                </div>
+                                <div className='place' >{singer.genre.name}</div>
+                                <div className='infoBox'>
+                                    <p>12 asistirán</p>
+                                    <p>4 amigos</p>
+                                    <p>{singer.concerts.price}</p>
+                                </div>
+
+                            </div>
+                        </div>                                    
+                    )
+                })}
+            
+            </div>
+                                            
+        </div> 
+
     )
 }

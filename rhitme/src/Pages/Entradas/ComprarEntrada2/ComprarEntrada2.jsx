@@ -2,6 +2,7 @@ import React from 'react'
 import './ComprarEntrada2.scss';
 import { Link } from 'react-router-dom';
 import Back from '../../../Components/Back/Back';
+
 const ComprarEntrada2 = () => {
   return (
     <div>
