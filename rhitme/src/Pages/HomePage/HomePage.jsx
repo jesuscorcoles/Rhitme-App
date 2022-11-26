@@ -1,9 +1,20 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useState } from 'react'
 import NavBar from '../../Components/NavBar/NavBar';
 import './HomePage.scss';
 
+export default function HomePage(){
+    const [artists, setArtists] = useState()
 
-const HomePage = () => {
+    useState(() => {
+        const getArtists = async () => {
+            const pepe = await axios.get(`http://localhost:9007`);
+            setArtists(pepe.data);
+            console.log((pepe));
+        }
+        getArtists();
+    }, [])
+
   return (
     <div>
         <NavBar></NavBar>
@@ -28,24 +39,14 @@ const HomePage = () => {
                 <div className='divcompleto'>
                     <h4 className='h4'>ARTISTAS</h4>
                     <div className='galeria'>
-                        <div className='individual'>
-                        </div>
-
-                        <div className='individual'>
-                        </div>
-
-                        <div className='individual'>
-                        </div>
-
-                        <div className='individual'>
-                        </div>
-
-                        <div className='individual'>
-
-                        </div>
-                    
+                        {artists?.map((artist, index) => {
+                            return(
+                                <div key={index} className='individual'>
+                                    <img className='individual' src={artist.image}></img>
+                                </div>  
+                            )
+                        })}
                     </div>
-                    
                 </div>
 
                 <div className='divcompleto'>
@@ -137,4 +138,4 @@ const HomePage = () => {
   )
 }
 
-export default HomePage
+
