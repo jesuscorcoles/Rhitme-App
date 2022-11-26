@@ -42,7 +42,7 @@ export default function HomePage(){
                         {artists?.map((artist, index) => {
                             return(
                                 <div key={index} className='individual'>
-                                    <img className='individual' src={artist.image}></img>
+                                    <img src={artist.image}></img>
                                 </div>  
                             )
                         })}
