@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './NavBar.scss'
 
 const NavBar = () => {
@@ -9,30 +9,30 @@ const NavBar = () => {
       <div className='boxesMenu'>
 
         
-        <Link className='iconAndText' to="/entradas">
+        <NavLink activeclassname={"active"} className='iconAndText' to="/entradas">
         <img className='icons' src='/entradas.png'></img>
         <p className='textMenu'>Entradas</p>
-        </Link>
+        </NavLink>
 
-        <Link className='iconAndText' to="/buscar">
+        <NavLink activeclassname={"active"} className='iconAndText' to="/buscar">
         <img className='icons' src='/lupa.png'></img>
         <p className='textMenu'>Buscar</p>
-        </Link>
+        </NavLink>
 
-        <Link className='iconAndText' to="/">
+        <NavLink activeclassname={"active"} className='iconAndText' to="/">
         <img className='icons' src='/estrella.png'></img>
         <p className='textMenu'>Home</p>
-        </Link>
+        </NavLink>
 
-        <Link className='iconAndText' to="/myconcerts">
+        <NavLink  className='iconAndText' to="/myconcerts">
         <img className='icons' src='/corchea-musical.png'></img>
         <p className='textMenu'>Mis Conciertos</p>
-        </Link>
+        </NavLink>
 
-        <Link className='iconAndText' to="/configuration">
+        <NavLink className='iconAndText' to="/configuration">
         <img className='icons' src='/engranaje.png'></img>
         <p className='textMenu'>Configuración</p>
-        </Link>
+        </NavLink>
 
       </div>
     </div>
