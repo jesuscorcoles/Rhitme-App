@@ -1,3 +1,4 @@
+
 .genBox{
     // border: 0.5px solid wheat;
     width: 100%;
@@ -6,23 +7,27 @@
     justify-content: center;
     margin-bottom: 80px;
 }
-
 .eventBox{
     // border: solid rgb(131, 121, 64);
     display: flex;
-    width:340px;
+    width: 340px;
     height: 100px; 
     margin-bottom: 20px;
+    @media (min-width: 576px ){
+        width: 600px;
+        height: 200px;
+    }
+    // @media (min-width: 1200px ){
+    //     width: 120px;
+    //     margin-right: 40px;
+    // }
 }
-
 .date{
     font-size: 25px;
     color: white;
     margin-top: 35px;
     margin-bottom: 10px;
-    opacity: 60%;
 }
-
 .imgBox{
     width: 30%;
     // border: salmon solid;
@@ -31,19 +36,19 @@
     align-items: center;   
     display: flex;
     align-items: flex-start;
+    @media (min-width: 576px ){
+        width: 40%;
+    }
 }
-
 .rightblock{
     width: 70%;
     // border: 0.5px solid rgb(86, 82, 165);
 }
-
 .placebox{
     width: 95%;
     // border: 0.5px solid rgb(168, 35, 123);
     padding-left: 10px;
 }
-
 .nameAndButton{
     // border: 0.5px solid rgb(89, 0, 255);
     width: 95%;
@@ -53,34 +58,39 @@
     justify-content: space-between;
     color: white;
     padding-left: 10px;
+    @media (min-width: 576px ){
+        margin-top: 40px;
+    }
 }
-
 .img{
     width: 160%;
     // border: 0.5px solid rgb(82, 67, 39);
 }
-
 .singerName{
     font-size: 20px;
     color: rgb(217, 184, 0);
     font-weight: 800;
+    @media (min-width: 576px ){
+        font-size: 30px;
+    }
 }
-
-
 .place{
     font-size: 10px;
     margin-bottom: 10px;
     margin-top: 2px;
     // border: 0.5px solid gold;
     color: rgb(255, 255, 255);
+    @media (min-width: 576px ){
+        font-size: 20px;
+        margin-top: 10px;
+    }
 }
-
 .genre{
     width: 100%;
+    @media (min-width: 576px ){
+        font-size: 15px;
+    }
 }
-
-
-
 .btn{
     width: 80px;
     height: 40px;
@@ -90,9 +100,12 @@
     // border-color: rgb(217, 184, 0);
     border-style: solid; 
     font-size: 15px;
-    color: rgba(255, 255, 255, 0.695);   
+    color: rgba(255, 255, 255, 0.695);  
+    @media (min-width: 576px ){
+        width: 130px;
+        height: 50px;
+    }
 }
-
 .infoBox{
     display: flex;
     width: 93%;
@@ -101,14 +114,18 @@
     justify-content: space-between;
     color: white; 
     margin-top: 25px;
+    @media (min-width: 576px ){
+        margin-top: 50px;
+    }
 }
-
 .line{
     width: 100%;
     height: 1px;
     background-color: #5c578d; 
 }
-
 .price{
     font-size: 20px;
+    @media (min-width: 576px ){
+        font-size: 25px;
+    }
 }

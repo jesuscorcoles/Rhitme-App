@@ -10,24 +10,36 @@ export default function EventoSeleccionado () {
   const {artistName} = useParams();
   const [cantantes, setCantantes] = useState ({});
   const [conciertos, setConciertos] = useState();
+  const [hour, setHours] = useState()
+  
 
   useEffect(() => {
     const getData = async () => {
-        const data = await axios.get(`http://localhost:9007/artists/entradas/${artistName}`);
+        const data = await axios.get(`http://localhost:9007/concerts/` );
         console.log(data);
         setCantantes(data.data[0]);
 }
   getData();
   }, []);
 
-  useEffect(() => {
-    const getData = async () => {
-        const data = await axios.get(`http://localhost:9007/concerts`);
-        console.log(data);
-        setConciertos(data.data[0]);
-}
-  getData();
-  }, []);
+//   useEffect(() => {
+//     const getHours = async () => {
+//         const data = await axios.get(`http://localhost:9007/concerts/`);
+//         console.log(data);
+//         setHours(data.data[0]);
+// }
+//   getHours();
+//   }, []);
+  
+
+//   useEffect(() => {
+//     const getData = async () => {
+//         const data = await axios.get(`http://localhost:9007/concerts`);
+//         console.log(data);
+//         setConciertos(data.data[0]);
+// }
+//   getData();
+//   }, []);
 
 
 
@@ -48,11 +60,27 @@ export default function EventoSeleccionado () {
         <div className='eventDateImg'>
 
           <div className='singImgBox'>
-          <img className='singerImg' src={cantantes?.image} alt=''></img> 
+            {conciertos?.map((concierto, index) => {
+              return(
+                <div key={index}>
+                  <img className='singerImg' src={concierto?.data.hour} alt=''></img> 
+                </div>
+              )
+            })}
           </div>
 
-          <div className='infobox'>
+          <div className='singImgBox'>
+            {conciertos?.map((concierto, index) => {
+              return(
+                <div key={index}>
+                  <p className='singerImg'>{concierto?.hour}</p> 
+                </div>
+              )
+            })}
+          </div>
+          
 
+          <div className='infobox'>
             <h1 className='textSing textSing--title'>{cantantes?.name}</h1>
             <p className='textSing'>{conciertos?.date}</p>
 
@@ -68,9 +96,7 @@ export default function EventoSeleccionado () {
                     <div className='iconAndHour'>
                         <img className='miniIcons' src='/euro.png' alt='precio'></img>
                         <p>{conciertos?.price}</p>
-                      </div>
                     </div>
-
                     <div>
                       <img className='like' src='corazon.png' alt='me interesa'></img>
                     </div>
@@ -78,33 +104,28 @@ export default function EventoSeleccionado () {
                   </div>
             </div>
             
-        </div>
-        <div className='buttonsBox'>
-          <button className="comprarahora comprarahora--botonComprar">Comprar</button>
-            
+          </div>
+          
+          <div className='buttonsBox'>
+            <button className="comprarahora comprarahora--botonComprar">Comprar</button>
             <button className='btnShare'>Compartir</button> 
-        </div>
+          </div>
 
-        <div className='infoEvent'>
+          <div className='infoEvent'>
+            <div>
+              <p><img className='miniIcons miniIcons--small' src="/location.png"></img>{conciertos?.halls.name}</p>
+              <p><img className='miniIcons miniIcons--small' src="/musica.png"></img>Soul / Funk</p>
+              <p><img className='miniIcons miniIcons--small' src="/grabacion.png"></img>Judith Hill + Dr.Funk</p>
+            </div>
+          </div>
 
-        <div>
-          <p><img className='miniIcons miniIcons--small' src="/location.png"></img>{conciertos?.halls.name}</p>
-
-          <p><img className='miniIcons miniIcons--small' src="/musica.png"></img>Soul / Funk</p>
-
-          <p><img className='miniIcons miniIcons--small' src="/grabacion.png"></img>Judith Hill + Dr.Funk</p>
-
-        </div>
-
-        </div>
-        <div className='infoConcert infoConcert--infoLarge'>
-        <p className='texts'>
-        {cantantes?.description}
-        </p>
+          <div className='infoConcert infoConcert--infoLarge'>
+            <p className='texts'>
+            {cantantes?.description}
+            </p>
+          </div>
 
         </div>
-
-
       </div>
     </div>
   )
