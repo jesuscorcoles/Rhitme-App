@@ -6,6 +6,7 @@ import { startSession } from 'mongoose';
 export default function ConcertsAvailable () {
     const [singers, setSingers] = useState()
     // const [salas, setSalas] = useState()
+    
     useEffect(() => {
         const getSingers = async () => {
             const pepe = await axios.get(`http://localhost:9007/artists`);
@@ -15,6 +16,7 @@ export default function ConcertsAvailable () {
     }, [])
     return (
         <div className='genBox'>
+
             <div >
                 {singers?.map((singer, index) => {
                     return(
@@ -22,6 +24,7 @@ export default function ConcertsAvailable () {
                             <div className='date'>{singer.concerts.date}</div>
                                 <div className='ajusteconcerts'>
                                     <div key={index} className="eventBox">
+
                                         <div className='imgBox'>
                                             <img className='img' src={singer.image}></img>
                                         </div>
@@ -42,15 +45,22 @@ export default function ConcertsAvailable () {
                                                 </div>
                                             </div>
                                         </div>
+
                                         <div className='line'></div>
                                     </div> 
                                     <div>
                                         <p>este div borrarlo que no vale pa na</p>
                                     </div> 
+
+                                        <div className='line'></div>
+                                    </div>  
+
                                 </div>
                     )
                 })}
+            
             </div>
         </div> 
+
     )
 }
