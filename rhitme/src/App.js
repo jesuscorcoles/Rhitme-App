@@ -49,7 +49,7 @@ function App() {
           {/* recordar poner autenticacion authbutton, requireautentication... etz */}
             <Route path="/registerpage" element={<RegisterPage></RegisterPage>}></Route>
             <Route path="/loginpage" element={<LoginPage></LoginPage>}></Route>
-            <Route path="/element={<HomePage></HomePage>}></Route>
+            <Route path="/" element={<HomePage></HomePage>}></Route>
             <Route path="/buscar" element={<SearchPage></SearchPage>}></Route>
             <Route path="/myconcerts" element={<MyConcertsPage></MyConcertsPage>}></Route>
             <Route path="/configuration" element={<ConfigurationPage></ConfigurationPage>}></Route>
@@ -83,7 +83,9 @@ function App() {
 
           </Routes>
 
-            </div>
+        </div>
+        
+
       </Router>
     </JwtContext.Provider>
   );
