@@ -48,7 +48,7 @@ function App() {
 
           <Route path="/entradas" element={<MenuEntradaPage></MenuEntradaPage>}></Route>
 
-          <Route path="/entradas/:artistName" element={<EventoSeleccionado></EventoSeleccionado>}></Route>
+          <Route path="/eventoseleccionado" element={<EventoSeleccionado></EventoSeleccionado>}></Route>
 
 
           <Route path="/comprarentrada1" element={<ComprarEntrada1></ComprarEntrada1>}></Route>

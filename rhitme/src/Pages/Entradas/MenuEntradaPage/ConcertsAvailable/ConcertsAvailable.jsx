@@ -43,13 +43,13 @@ export default function ConcertsAvailable () {
                                 
                                 <div className='singerName'>{singer.name}</div>
 
-                                <Link  to="/entradas/:artistName"> <button className='btn'>Info</button></Link>
+                                <Link  to="/eventoseleccionado"> <button className='btn'>Info</button></Link>
                                 
                                 </div>
                                 
                                 <div className='infoBox'>
                                     <div className='genre'>
-                                    <img className='miniIcons' src='musica.png'></img>{singer.genre.name}</div>
+                                    <img className='miniIcons miniIcons--tickets' src='musica.png'></img>{singer.genre.name}</div>
                                     <p className='price'>{singer.concerts.price}</p>
                                 </div>
                                 
