@@ -21,27 +21,39 @@ export default function ConcertsAvailable () {
     return (
         <div className='genBox'>
 
-            <div>
+            <div >
                 {singers?.map((singer, index) => {
 
                     return(
-                        <div>  
+                        <div className='concerts'>
                             <div className='date'>{singer.concerts.date}</div>
-                            <div key={index} className="eventBox">
+                                <div className='ajusteconcerts'>
+                                    <div key={index} className="eventBox">
 
-                                <div className='imgBox'>
-                                    <img className='img' src={singer.image}></img>
-                                </div>
+                                        <div className='imgBox'>
+                                            <img className='img' src={singer.image}></img>
+                                        </div>
 
-                                <div className='rightblock'>
+                                        <div className='rightblock'>
 
-                                <div className='placebox'>
-                                <div className='place'>{singer.halls.name}</div>
-                                </div>
+                                            <div className='placebox'>
+                                                <div className='place'>
+                                                    {singer.halls.name}
+                                                </div>
+                                            </div>
 
-                                <div className='nameAndButton'>
-                                
-                                <div className='singerName'>{singer.name}</div>
+                                            <div className='nameAndButton'>
+                                                <div className='singerName'>{singer.name}</div>
+                                                    <Link  to="/entradas/:artistName"> <button className='btn'>Info</button></Link>
+                                                </div>
+                                            
+                                                <div className='infoBox'>
+                                                    <div className='genre'>
+                                                    <img className='miniIcons' src='musica.png'></img>{singer.genre.name}</div>
+                                                    <p className='price'>{singer.concerts.price}</p>
+                                                </div>
+                                            </div>
+                                        </div>
 
                                 <Link  to="/eventoseleccionado"> <button className='btn'>Info</button></Link>
                                 
