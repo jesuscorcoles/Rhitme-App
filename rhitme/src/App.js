@@ -1,6 +1,6 @@
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import './App.scss';
-// import NavBar from "./Components/NavBar/NavBar";
+
 import CompraEfectuada from "./Pages/Entradas/CompraEfectuada/CompraEfectuada";
 import ComprarEntrada1 from "./Pages/Entradas/ComprarEntrada1/ComprarEntrada1";
 import ComprarEntrada2 from "./Pages/Entradas/ComprarEntrada2/ComprarEntrada2";
@@ -44,8 +44,13 @@ function App() {
           <Route path="/myconcerts" element={<MyConcertsPage></MyConcertsPage>}></Route>
           <Route path="/configuration" element={<ConfigurationPage></ConfigurationPage>}></Route>
           <Route path="/conciertos" element={<Conciertos></Conciertos>}></Route>
+
+
           <Route path="/entradas" element={<MenuEntradaPage></MenuEntradaPage>}></Route>
-          <Route path="/eventoseleccionado" element={<EventoSeleccionado></EventoSeleccionado>}></Route>
+
+          <Route path="/entradas/:artistName" element={<EventoSeleccionado></EventoSeleccionado>}></Route>
+
+
           <Route path="/comprarentrada1" element={<ComprarEntrada1></ComprarEntrada1>}></Route>
           <Route path="/comprarentrada2" element={<ComprarEntrada2></ComprarEntrada2>}></Route>
           <Route path="/compraefectuada" element={<CompraEfectuada></CompraEfectuada>}></Route>

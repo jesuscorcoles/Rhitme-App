@@ -18,12 +18,10 @@ export default function ConcertsAvailable () {
 
     }, [])
 
-
     return (
         <div className='genBox'>
 
             <div>
-            
                 {singers?.map((singer, index) => {
 
                     return(
@@ -31,28 +29,35 @@ export default function ConcertsAvailable () {
                             <div className='date'>{singer.concerts.date}</div>
                             <div key={index} className="eventBox">
 
-
                                 <div className='imgBox'>
                                     <img className='img' src={singer.image}></img>
                                 </div>
 
-                                <div>
+                                <div className='rightblock'>
+
+                                <div className='placebox'>
                                 <div className='place'>{singer.halls.name}</div>
+                                </div>
 
-
+                                <div className='nameAndButton'>
+                                
                                 <div className='singerName'>{singer.name}</div>
 
-                                <Link  to="/eventoseleccionado"> <button className='btn'>Info</button></Link>
+                                <Link  to="/entradas/:artistName"> <button className='btn'>Info</button></Link>
                                 
                                 </div>
-                                <div className='place' >{singer.genre.name}</div>
+                                
                                 <div className='infoBox'>
-                                    <p>12 asistirán</p>
-                                    <p>4 amigos</p>
-                                    <p>{singer.concerts.price}</p>
+                                    <div className='genre'>
+                                    <img className='miniIcons' src='musica.png'></img>{singer.genre.name}</div>
+                                    <p className='price'>{singer.concerts.price}</p>
                                 </div>
+                                
+                                </div>
+                                
 
                             </div>
+                            <div className='line'></div>
                         </div>                                    
                     )
                 })}
