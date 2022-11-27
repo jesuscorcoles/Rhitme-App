@@ -125,13 +125,17 @@
     margin-top: 3vh;
     width: 20vh;
     height: 6vh;
-    background-color: yellow;
+    background-color: rgb( 255, 220, 53);
     border-radius: 15px;
 
     &--botonComprar{
         width: 90px;
         border-radius: 50px;
         margin-top: 0px;
+    }
+
+    &--share{
+        background-color: blue;
     }
     
 }
