@@ -18,9 +18,7 @@ const MenuEntradaPage = () => {
             <button className='botonhome'>Eventos</button>
             <button className='botonhome'>Salas</button>
         </div>
-        <div>
-          
-          
+        <div> 
           <ConcertsAvailable></ConcertsAvailable>
           
           <NavBar></NavBar>

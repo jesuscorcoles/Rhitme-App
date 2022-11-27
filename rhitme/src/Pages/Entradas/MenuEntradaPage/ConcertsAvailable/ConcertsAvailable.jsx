@@ -55,9 +55,22 @@ export default function ConcertsAvailable () {
                                             </div>
                                         </div>
 
-                                        <div className='line'></div>
-                                    </div>  
+                                <Link  to="/eventoseleccionado"> <button className='btn'>Info</button></Link>
+                                
                                 </div>
+                                
+                                <div className='infoBox'>
+                                    <div className='genre'>
+                                    <img className='miniIcons miniIcons--tickets' src='musica.png'></img>{singer.genre.name}</div>
+                                    <p className='price'>{singer.concerts.price}</p>
+                                </div>
+                                
+                                </div>
+                                
+
+                            </div>
+                            <div className='line'></div>
+                        </div>                                    
                     )
                 })}
             

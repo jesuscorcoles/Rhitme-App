@@ -7,7 +7,6 @@ import './EventoSeleccionado.scss';
 
 
 export default function EventoSeleccionado () {
-  const {artistName} = useParams();
   const [cantantes, setCantantes] = useState ({});
   const [conciertos, setConciertos] = useState();
   const [hour, setHours] = useState()
@@ -15,22 +14,12 @@ export default function EventoSeleccionado () {
 
   useEffect(() => {
     const getData = async () => {
-        const data = await axios.get(`http://localhost:9007/concerts/` );
+        const data = await axios.get(`http://localhost:9007/artists`);
         console.log(data);
         setCantantes(data.data[0]);
 }
   getData();
   }, []);
-
-//   useEffect(() => {
-//     const getHours = async () => {
-//         const data = await axios.get(`http://localhost:9007/concerts/`);
-//         console.log(data);
-//         setHours(data.data[0]);
-// }
-//   getHours();
-//   }, []);
-  
 
 //   useEffect(() => {
 //     const getData = async () => {
@@ -104,12 +93,12 @@ export default function EventoSeleccionado () {
                   </div>
             </div>
             
-          </div>
-          
-          <div className='buttonsBox'>
-            <button className="comprarahora comprarahora--botonComprar">Comprar</button>
-            <button className='btnShare'>Compartir</button> 
-          </div>
+        </div>
+        <div className='buttonsBox'>
+            <Link to="/comprarentrada1"><button className="btnShare btnShare--buy">Comprar</button></Link>
+            
+            <Link to="" ><button className='btnShare' >Compartir</button> </Link>
+        </div>
 
           <div className='infoEvent'>
             <div>
