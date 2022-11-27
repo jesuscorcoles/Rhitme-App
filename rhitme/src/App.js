@@ -28,50 +28,62 @@ import SearchPage from "./Pages/SearchPage/SearchPage";
 import MyConcertsPage from "./Pages/MyConcertsPage/MyConcertsPage";
 import ConfigurationPage from "./Pages/ConfigurationPage/ConfigurationPage";
 
-// http://localhost:9004
+//hecho durante register/login
+import LoginPage from "./Pages/LoginPage/LoginPage";
+import { JwtContext } from './shared/contexts/JwtContext';
+import React, { useState } from 'react';
+import RegisterPage from "./Pages/RegisterPage/RegisterPage";
+
+
 
 function App() {
+  const [jwt, setJwt] = useState(localStorage.getItem('token') || null);
+
   return (
-    <Router>
+    <JwtContext.Provider value={{ jwt, setJwt }}>
+      <Router>
 
-      <div className='general'>
-        {/* <NavBar></NavBar> */}
-       
-        <Routes>
+        <div className='general'>
+          {/* <NavBar></NavBar> */}
+
+          {/* recordar poner autenticacion authbutton, requireautentication... etz */}
         
-          <Route path="/" element={<HomePage></HomePage>}></Route>
-          <Route path="/buscar" element={<SearchPage></SearchPage>}></Route>
-          <Route path="/myconcerts" element={<MyConcertsPage></MyConcertsPage>}></Route>
-          <Route path="/configuration" element={<ConfigurationPage></ConfigurationPage>}></Route>
-          <Route path="/conciertos" element={<Conciertos></Conciertos>}></Route>
-          <Route path="/entradas" element={<MenuEntradaPage></MenuEntradaPage>}></Route>
-          <Route path="/eventoseleccionado" element={<EventoSeleccionado></EventoSeleccionado>}></Route>
-          <Route path="/comprarentrada1" element={<ComprarEntrada1></ComprarEntrada1>}></Route>
-          <Route path="/comprarentrada2" element={<ComprarEntrada2></ComprarEntrada2>}></Route>
-          <Route path="/compraefectuada" element={<CompraEfectuada></CompraEfectuada>}></Route>
-          <Route path="/ticketdetail" element={<TicketDetail></TicketDetail>}></Route>
-          <Route path="/a4" element={<A4></A4>}></Route>
-          <Route path="/artistasvinculados" element={<ArtistasVinculados></ArtistasVinculados>}></Route>
-          <Route path="/bienvenido" element={<Bienvenido></Bienvenido>}></Route>
-          <Route path="/mensajesamigos" element={<MensajesAmigos></MensajesAmigos>}></Route>
-          <Route path="/notificacionOk" element={<NotificacionOk></NotificacionOk>}></Route>
-          <Route path="/onboarding" element={<OnBoarding></OnBoarding>}></Route>
-          <Route path="/onboarding2" element={<OnBoarding2></OnBoarding2>}></Route>
-          <Route path="/onboarding3" element={<OnBoarding3></OnBoarding3>}></Route>
-          <Route path="/personalizacion" element={<Personalizacion></Personalizacion>}></Route>
-          <Route path="/procesosincronizacion" element={<ProcesoSincronizacion></ProcesoSincronizacion>}></Route>
-          <Route path="/procesosincronizacion2" element={<ProcesoSincronizacion2></ProcesoSincronizacion2>}></Route>
-          <Route path="/registrofanclub1" element={<RegistroFanClub1></RegistroFanClub1>}></Route>
-          <Route path="/registrofanclub2" element={<RegistroFanClub2></RegistroFanClub2>}></Route>
-          <Route path="/sincronizacionstreaming" element={<SincronizarStreaming></SincronizarStreaming>}></Route>
-          <Route path="/tourtickets" element={<TourTickets></TourTickets>}></Route>
+          <Routes>
+            <Route path="/registerpage" element={<RegisterPage></RegisterPage>}></Route>
+            <Route path="/loginpage" element={<LoginPage></LoginPage>}></Route>
+            <Route path="/" element={<HomePage></HomePage>}></Route>
+            <Route path="/buscar" element={<SearchPage></SearchPage>}></Route>
+            <Route path="/myconcerts" element={<MyConcertsPage></MyConcertsPage>}></Route>
+            <Route path="/configuration" element={<ConfigurationPage></ConfigurationPage>}></Route>
+            <Route path="/conciertos" element={<Conciertos></Conciertos>}></Route>
+            <Route path="/entradas" element={<MenuEntradaPage></MenuEntradaPage>}></Route>
+            <Route path="/eventoseleccionado" element={<EventoSeleccionado></EventoSeleccionado>}></Route>
+            <Route path="/comprarentrada1" element={<ComprarEntrada1></ComprarEntrada1>}></Route>
+            <Route path="/comprarentrada2" element={<ComprarEntrada2></ComprarEntrada2>}></Route>
+            <Route path="/compraefectuada" element={<CompraEfectuada></CompraEfectuada>}></Route>
+            <Route path="/ticketdetail" element={<TicketDetail></TicketDetail>}></Route>
+            <Route path="/a4" element={<A4></A4>}></Route>
+            <Route path="/artistasvinculados" element={<ArtistasVinculados></ArtistasVinculados>}></Route>
+            <Route path="/bienvenido" element={<Bienvenido></Bienvenido>}></Route>
+            <Route path="/mensajesamigos" element={<MensajesAmigos></MensajesAmigos>}></Route>
+            <Route path="/notificacionOk" element={<NotificacionOk></NotificacionOk>}></Route>
+            <Route path="/onboarding" element={<OnBoarding></OnBoarding>}></Route>
+            <Route path="/onboarding2" element={<OnBoarding2></OnBoarding2>}></Route>
+            <Route path="/onboarding3" element={<OnBoarding3></OnBoarding3>}></Route>
+            <Route path="/personalizacion" element={<Personalizacion></Personalizacion>}></Route>
+            <Route path="/procesosincronizacion" element={<ProcesoSincronizacion></ProcesoSincronizacion>}></Route>
+            <Route path="/procesosincronizacion2" element={<ProcesoSincronizacion2></ProcesoSincronizacion2>}></Route>
+            <Route path="/registrofanclub1" element={<RegistroFanClub1></RegistroFanClub1>}></Route>
+            <Route path="/registrofanclub2" element={<RegistroFanClub2></RegistroFanClub2>}></Route>
+            <Route path="/sincronizacionstreaming" element={<SincronizarStreaming></SincronizarStreaming>}></Route>
+            <Route path="/tourtickets" element={<TourTickets></TourTickets>}></Route>
 
-        </Routes>
+          </Routes>
 
-          </div>
+            </div>
 
-    </Router>
-
+      </Router>
+    </JwtContext.Provider>
   );
 }
 
