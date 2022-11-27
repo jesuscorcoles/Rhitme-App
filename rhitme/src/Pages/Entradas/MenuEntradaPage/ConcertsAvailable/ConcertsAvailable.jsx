@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import './ConcertsAvailable.scss';
 import { Link } from 'react-router-dom'
+import { startSession } from 'mongoose';
 export default function ConcertsAvailable () {
     const [singers, setSingers] = useState()
     // const [salas, setSalas] = useState()
@@ -42,7 +43,10 @@ export default function ConcertsAvailable () {
                                             </div>
                                         </div>
                                         <div className='line'></div>
-                                    </div>  
+                                    </div> 
+                                    <div>
+                                        <p>este div borrarlo que no vale pa na</p>
+                                    </div> 
                                 </div>
                     )
                 })}
