@@ -1,17 +1,25 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom';
 import NavBar from '../../Components/NavBar/NavBar';
 import './HomePage.scss';
+
 // import Slider from '../../Components/Slider/Slider';
 
 
 
 export default function HomePage(){
+    
+
     const [artists, setArtists] = useState()
     const [styles, setStyles] = useState()
     const [halls, setHalls] = useState()
     const [medias, setMedias] = useState()
     const [revistas, setRevistas] = useState()
+    const {id} = useParams();
+
+    const user = JSON.parse(localStorage.getItem('user'));
+
     const sustitucionHombresG = "/hombres-g.jpg";
     const sustitucionLeiva = "/leiva.jpg";
     const sustitucionCarl = "/carl.jpeg";
@@ -87,11 +95,14 @@ export default function HomePage(){
                 <button className='botonhome'>Fan Club</button>
             </div>
             
-            <div className='titulos'>
-                <h1 className='h1'>¡Hola Sendoa!</h1>
-                <h3 className='h3'>¿Qué concierto te apetece?</h3>
+            <div className='titulos titulos--hola'>
+            <p>
+            ¡ Hola {user.name} !
+            </p>
+                {/* <h1 className='h1'>¡Hola {names?.name}</h1>  */}
+                
             </div>
-
+                            
             <div className='secction2'>
                 <div className='divcompleto'>
                     <h4 className='h4'>ARTISTAS</h4>
