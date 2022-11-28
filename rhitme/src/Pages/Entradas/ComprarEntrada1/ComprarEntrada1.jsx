@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './ComprarEntrada1.scss';
 import NavBar from '../../../Components/NavBar/NavBar'
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
 import Back from '../../../Components/Back/Back';
 
@@ -9,26 +9,17 @@ import Back from '../../../Components/Back/Back';
 const ComprarEntrada1 = () => {
 
   const [cantantes, setCantantes] = useState ({});
-  const [conciertos, setConciertos] = useState();
+  const {id} = useParams();
+  console.log(id);
 
   useEffect(() => {
     const getData = async () => {
-        const data = await axios.get(`http://localhost:9007/artists`);
+        const data = await axios.get(`http://localhost:9007/artists/${id}`);
         console.log(data);
-        setCantantes(data.data[0]);
+        setCantantes(data.data); //el [0] luego se tiene que quitar
 }
   getData();
   }, []);
-
-  useEffect(() => {
-    const getData = async () => {
-        const data = await axios.get(`http://localhost:9007/concerts`);
-        console.log(data);
-        setConciertos(data.data[0]);
-}
-  getData();
-  }, []);
-
 
 
   return (
@@ -46,7 +37,7 @@ const ComprarEntrada1 = () => {
 
               <img className='fotico' src={cantantes?.image}></img>
               
-              {/* <div className="imagenpequeña"></div> */}
+              
               
             </div>
           </div>
@@ -56,8 +47,8 @@ const ComprarEntrada1 = () => {
             <h1 className='h1entradas1'>{cantantes?.name}</h1>
 
             
-            <h4>{conciertos?.halls.name}</h4>
-              
+            {/* <h4>{conciertos?.halls.name}</h4>
+               */}
               <div className="mapa">
                 <img src='/mapa.png'></img>
               </div>

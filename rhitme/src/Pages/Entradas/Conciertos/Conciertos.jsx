@@ -8,7 +8,6 @@ import Back from '../../../Components/Back/Back';
 
 export default function Conciertos(){
   const [conciertos, setConcerts] = useState ({});
-  const {id} = useParams();
 
   useEffect(() => {
     const getData = async () => {
