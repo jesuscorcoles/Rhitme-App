@@ -24,7 +24,7 @@ const NavBar = () => {
         <p className='textMenu'>Home</p>
         </NavLink>
 
-        <NavLink  className='iconAndText' to="/myconcerts">
+        <NavLink  className='iconAndText' to="/conciertos">
         <img className='icons' src='/corchea-musical.png'></img>
         <p className='textMenu'>Mis Conciertos</p>
         </NavLink>
