@@ -21,7 +21,7 @@ import { JwtContext } from './shared/contexts/JwtContext';
 import React, { useState } from 'react';
 import RegisterPage from "./Pages/RegisterPage/RegisterPage";
 import AuthButton from "./shared/components/AuthButton/AuthButton";
-// import RequireAuth from "./shared/components/RequireAuth/RequireAuth";
+import RequireAuth from "./shared/components/RequireAuth/RequireAuth";
 
 
 
@@ -35,7 +35,6 @@ function App() {
         <div className='general'>
           {/* <NavBar></NavBar> */}
 
-
           <AuthButton/>
             {/* recordar poner requireauthn en paginas necesario logueo */}
             <Routes>
@@ -44,9 +43,9 @@ function App() {
 
               {/* <Route path="/profile" element={<RequireAuth><HomePage/></RequireAuth>}/> EJEMPLO AUTH */}
 
-              {/* <Route path="/" element={<RequireAuth><HomePage/></RequireAuth>}></Route> */}
+              <Route path="/" element={<RequireAuth><HomePage/></RequireAuth>}></Route>
               
-              <Route path="/" element={<HomePage/>}></Route>
+              {/* <Route path="/" element={<HomePage/>}></Route> */}
               <Route path="/myconcerts" element={<MyConcertsPage></MyConcertsPage>}></Route>
               <Route path="/configuration" element={<ConfigurationPage></ConfigurationPage>}></Route>
               <Route path="/conciertos" element={<Conciertos></Conciertos>}></Route>
