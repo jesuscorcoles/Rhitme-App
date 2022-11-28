@@ -9,7 +9,7 @@
 
 .downGenLogin{
     width: 70%;
-    height: 240px;
+    height: 250px;
     margin-top: 20%;
     // border: solid rgb(38, 98, 162);
     background-color: white;
@@ -18,7 +18,9 @@
     display: flex;
     justify-content: center;
     
-
+    &--reg{
+        height: 400px;
+    }
 }
 
 .inputsBox{
@@ -61,4 +63,29 @@
     width: 200px;
     height: 20px;
     padding: 5px;
+}
+
+.register{
+    font-size: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: blue;
+}
+
+.well{
+    width: 100%;
+    // border: solid firebrick;
+    height: 49px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.btnlogout{
+    width: 100%;
+    height: 30px;
+    // border: solid rgb(69, 112, 136);
+    display: flex;
+    justify-content: center;
 }

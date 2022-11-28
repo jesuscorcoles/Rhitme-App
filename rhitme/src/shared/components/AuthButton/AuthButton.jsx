@@ -16,15 +16,17 @@ export default function AuthButton () {
     }
 
     return jwt && user ? (
-        <p>
-            Welcome! {user.name}
-            <button
+
+        <div className="well">
+        
+            <button className='botonLog'
                 onClick={signOut}
             >
                 Sign out
             </button>
-        </p>
+        
+        </div>
     ) : (
-        <p>You are not logged in.</p>
+        <p></p>
     );
 }

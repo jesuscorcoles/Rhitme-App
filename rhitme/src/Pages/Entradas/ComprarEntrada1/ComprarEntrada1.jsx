@@ -10,7 +10,6 @@ const ComprarEntrada1 = () => {
 
   const [cantantes, setCantantes] = useState ({});
   const {id} = useParams();
-  console.log(id);
 
   useEffect(() => {
     const getData = async () => {

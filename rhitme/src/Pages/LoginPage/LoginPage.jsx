@@ -71,12 +71,14 @@ import { API } from "../../shared/services/api";
 import './LoginPage.scss';
 
 export default function LoginPage () {
+    
     const { register, handleSubmit } = useForm();
     const { setJwt } = useContext(JwtContext);
     const onSubmit = formData => {
         API.post('users/login', formData).then(res => {
             localStorage.setItem('token', res.data.token)
             localStorage.setItem('user', JSON.stringify(res.data.user))
+            window.location.href="/"
             setJwt(true);
         })
     }
@@ -84,9 +86,9 @@ export default function LoginPage () {
 
     <div className='generalLogin'>
         <div className='downGenLogin'>
-        <div className='inputsBox'>
+            <div className='inputsBox'>
 
-            <form onSubmit={handleSubmit(onSubmit)}>
+                <form onSubmit={handleSubmit(onSubmit)}>
                 {/* register your input into the hook by invoking the "register" function */}
 
                 <div className='loginImput'>
@@ -119,6 +121,9 @@ export default function LoginPage () {
 
                 <div>
                 <input className='botonLog' type="submit" value="Login"/>
+                </div>
+                <div className='register'>
+                    <Link to="/registerpage"><p>o puedes registrarte aquí</p></Link>
                 </div>
 
             </form>

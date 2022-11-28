@@ -25,6 +25,7 @@
     color: #ffffff;
     border: none;
     margin-top: 15vh;
+
     @media (min-width: 576px){
         font-size: 30px;
         margin-bottom: 1%;
@@ -48,6 +49,12 @@
     align-items: center;
     margin-top: 10%;
     margin-bottom: 15%;
+
+    &--hola{
+        color: white;
+        font-size: 30px;
+    }
+
     @media (min-width:678px){
         font-size: 20px;
         margin-top: 10%;

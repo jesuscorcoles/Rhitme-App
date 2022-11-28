@@ -46,24 +46,17 @@ function App() {
               <Route path="/" element={<RequireAuth><HomePage/></RequireAuth>}></Route>
               
               {/* <Route path="/" element={<HomePage/>}></Route> */}
+              
               <Route path="/myconcerts" element={<MyConcertsPage></MyConcertsPage>}></Route>
               <Route path="/configuration" element={<ConfigurationPage></ConfigurationPage>}></Route>
               <Route path="/conciertos" element={<Conciertos></Conciertos>}></Route>
-              
               <Route path="/entradas" element={<MenuEntradaPage></MenuEntradaPage>}></Route>
               <Route path="/entradas/:id" element={<EventoSeleccionado></EventoSeleccionado>}></Route>
               <Route path="/comprarentradas1/:id" element={<ComprarEntrada1></ComprarEntrada1>}></Route>
-
               <Route path="/comprarentrada2" element={<ComprarEntrada2></ComprarEntrada2>}></Route>
               <Route path="/compraefectuada" element={<CompraEfectuada></CompraEfectuada>}></Route>
               <Route path="/ticketdetail" element={<TicketDetail></TicketDetail>}></Route>
-
-
               <Route path="/bienvenido" element={<Bienvenido></Bienvenido>}></Route>
-
-
-
-             
 
             </Routes>
 
