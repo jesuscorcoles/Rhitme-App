@@ -42,6 +42,7 @@ function App() {
               <Route path="/loginpage" element={<LoginPage></LoginPage>}></Route>
 
               {/* <Route path="/profile" element={<RequireAuth><HomePage/></RequireAuth>}/> EJEMPLO AUTH */}
+              <Route path="/" element={<HomePage/>}></Route>
 
               <Route path="/" element={<RequireAuth><HomePage/></RequireAuth>}></Route>
               
