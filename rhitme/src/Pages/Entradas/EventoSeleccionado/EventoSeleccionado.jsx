@@ -7,32 +7,20 @@ import './EventoSeleccionado.scss';
 
 
 export default function EventoSeleccionado () {
-  const [cantantes, setCantantes] = useState ({});
-  const [conciertos, setConciertos] = useState();
-  // const {artistName} = useParams();
+  const [cantantes, setCantantes] = useState ();
   const {id} = useParams();
-
   
 
   useEffect(() => {
-    const getData = async (sing) => {
-        // const data = await axios.get(`http://localhost:9007/artists/`);
+    const getData = async () => {
         const data = await axios.get(`http://localhost:9007/artists/${id}`);
         console.log(data);
         setCantantes(data.data);
-}
+    };
+    
   getData();
   }, []);
 
-useEffect(() => {
-    const getData = async () => {
-        const data = await axios.get(`http://localhost:9007/concerts/${id}`);
-        // const data = await axios.get(`http://localhost:9007/concerts/${artistName}`);
-        console.log(data);
-        setConciertos(data.data);
-}
-  getData();
-  }, []);
 
   return (
     <div className='allContent'>
@@ -57,7 +45,7 @@ useEffect(() => {
 
             <div className='infobox'>
               <h1 className='textSing textSing--title'>{cantantes?.name}</h1>
-              <p className='textSing'>{conciertos?.date}</p>
+              <p className='textSing'>{cantantes?.concerts.date}</p>
 
                     <div className='hourAndLike'>
 
@@ -65,18 +53,18 @@ useEffect(() => {
 
                         <div className='iconAndHour'>
                             <img className='miniIcons' src='/hora.png' alt='hora'></img>
-                            <p>{conciertos?.hour}</p>
+                            <p>{cantantes?.concerts.hour}</p>
                         </div>
 
                         <div className='iconAndHour'>
                             <img className='miniIcons' src='/euro.png' alt='precio'></img>
-                            <p>{conciertos?.price}</p>
+                            <p>{cantantes?.concerts.price}</p>
                         </div>
                       
                       </div>
 
                         <div>
-                          <img className='like' src='corazon.png' alt='me interesa'></img>
+                          <img className='like' src='/corazon.png' alt='me interesa'></img>
                         </div>
                     </div>
             </div>
@@ -87,9 +75,10 @@ useEffect(() => {
           <div className='infoabajo'>
 
             <div className='buttonsBox'>
+
                 <Link to="/comprarentrada1"><button className="btnShare btnShare--buy">Comprar</button></Link>
                 
-                <Link to="" ><button className='btnShare' >Compartir</button> </Link>
+                <Link to="" ><button className='btnShare'>Compartir</button> </Link>
             </div>
 
 
@@ -97,9 +86,9 @@ useEffect(() => {
 
                   <div>
 
-                    <p><img className='miniIcons miniIcons--small' src="/location.png"></img>{conciertos?.halls.name}</p>
+                    <p><img className='miniIcons miniIcons--small' src="/location.png"></img>{cantantes?.halls.name}</p>
                     <p><img className='miniIcons miniIcons--small' src="/musica.png"></img>{cantantes?.name}</p>
-                    <p><img className='miniIcons miniIcons--small' src="/grabacion.png"></img>{conciertos?.hour} h</p>
+                    <p><img className='miniIcons miniIcons--small' src="/grabacion.png"></img>{cantantes?.concerts.hour} h</p>
 
                   </div>
             </div>
