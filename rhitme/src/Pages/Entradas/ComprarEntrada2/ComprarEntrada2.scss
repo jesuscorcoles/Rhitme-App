@@ -130,8 +130,15 @@
     margin-left: 0;    
     }
 }
-.botoncomprarentrada2{
+.btnpagarbox{
     width: 100%;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.botoncomprarentrada2{
+    width: 150px;
     height: 6vh;
     margin-left: 3vh;
     margin-right: 3vh;

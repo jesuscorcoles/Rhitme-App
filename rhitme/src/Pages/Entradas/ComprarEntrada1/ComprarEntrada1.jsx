@@ -59,7 +59,7 @@ const ComprarEntrada1 = () => {
             <h4>{conciertos?.halls.name}</h4>
               
               <div className="mapa">
-
+                <img src='/mapa.png'></img>
               </div>
               <div className="precioyboton">
                 <h1 className="precio">€ 25</h1>

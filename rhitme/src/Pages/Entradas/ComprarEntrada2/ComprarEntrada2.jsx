@@ -36,7 +36,10 @@ const ComprarEntrada2 = () => {
                 <input className='datostarjeta' placeholder='CVV'></input>
               </div>
               <input className='inputcomprarentrada2 separaciondatos' placeholder='Titular'></input>
-              <button className='botoncomprarentrada2'>Pagar</button>
+
+              <div className='btnpagarbox'>
+              <Link to="/compraefectuada"><button className='botoncomprarentrada2'>Pagar</button></Link>
+              </div>
             </div>
           </div>
         </div>
