@@ -33,6 +33,7 @@ export default function EventoSeleccionado () {
             <div className='infobox'>
               <h1 className='textSing textSing--title'>{cantantes?.name}</h1>
               <p className='textSing'>{cantantes?.concerts.date}</p>
+
                     <div className='hourAndLike'>
                       <div>
                         <div className='iconAndHour'>
@@ -52,6 +53,7 @@ export default function EventoSeleccionado () {
           </div>
           <div className='infoabajo'>
             <div className='buttonsBox'>
+
                 <Link to="/comprarentrada1"><button className="btnShare btnShare--buy">Comprar</button></Link>
                 <Link to="" ><button className='btnShare'>Compartir</button> </Link>
             </div>
@@ -60,6 +62,7 @@ export default function EventoSeleccionado () {
                     <p><img className='miniIcons miniIcons--small' src="/location.png"></img>{cantantes?.halls.name}</p>
                     <p><img className='miniIcons miniIcons--small' src="/musica.png"></img>{cantantes?.name}</p>
                     <p><img className='miniIcons miniIcons--small' src="/grabacion.png"></img>{cantantes?.concerts.hour} h</p>
+
                   </div>
             </div>
             <div className='infoConcert infoConcert--infoLarge'>

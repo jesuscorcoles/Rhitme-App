@@ -8,7 +8,7 @@ export default function LoginPage () {
     const { setJwt } = useContext(JwtContext);
 
     const onSubmit = formData => {
-        API.post('login', formData).then(res => {
+        API.post('users/login', formData).then(res => {
             localStorage.setItem('token', res.data.token)
             localStorage.setItem('user', JSON.stringify(res.data.user))
             setJwt(true);
