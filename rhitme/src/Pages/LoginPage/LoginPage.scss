@@ -4,6 +4,9 @@
     // border: solid rgb(186, 6, 102);
     display: flex;
     justify-content: center;
+    @media (min-width: 678px ){
+        height: 770px;
+    }
     
 }
 
