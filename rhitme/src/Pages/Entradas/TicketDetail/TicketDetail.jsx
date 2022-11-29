@@ -51,7 +51,7 @@ const TicketDetail = () => {
 
           <div className='iconAndHour'>
               <img className='miniIcons' src='/hora.png' alt='hora'></img>
-              <p>20:00 h</p>
+              <p>20:00</p>
           </div>
 
           <div className='iconAndHour'>
@@ -69,8 +69,8 @@ const TicketDetail = () => {
 
         <div className='infocon'>
           <h2>Leiva</h2>
-          <p>en Teatro Eslava</p>
-          <p>c/ Arenal nº 11, 28010 MADRID</p>
+          <p>en FABRIK</p>
+          <p>Avenida de la Industria nº 82, 28970. HUMANES DE MADRID</p>
           <p>Apertura de puertas: 19:00 h</p>
         </div>
 

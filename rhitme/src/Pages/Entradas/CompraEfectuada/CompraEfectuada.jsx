@@ -20,12 +20,12 @@ const navigate = useNavigate();
         
         <div className='compraefectuada'>
         <div className='agrupatexto'> 
-          <h1>¡Genial Sandoa!</h1>
+          <h1>¡Enhorabuena!</h1>
           <h4>Que disfrutes del concierto</h4>
         </div>
         <div className='agrupatexto'>
-          <h4>RYTHME te ha envíado un correo</h4>
-          <h4>con tu entrada y comprobante.</h4>
+          <h4>RYTHME te ha enviado un correo</h4>
+          <h4>con tu entrada y tu comprobante.</h4>
         </div>
         <div className='agrupatexto'>
           <h4>¿Quieres ver tu ticket?</h4>
