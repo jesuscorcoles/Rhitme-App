@@ -8,7 +8,6 @@ import './EventoSeleccionado.scss';
 
 export default function EventoSeleccionado () {
   const [cantantes, setCantantes] = useState ();
-  const {eveId} = useParams();
   const {id} = useParams();
   
 
@@ -33,9 +32,6 @@ export default function EventoSeleccionado () {
           <p>Entradas</p>
           <div className='btnBox'></div>
       </header>
-        
-        
-
 
       <div className='eventDateImg'>
 
@@ -87,8 +83,9 @@ export default function EventoSeleccionado () {
 
                   <div>
 
-                    <p><img className='miniIcons miniIcons--small' src="/location.png"></img>{cantantes?.halls.name}</p>
+                    <p><img className='miniIcons miniIcons--small' src="/location.png"></img>{cantantes?.halls.name} </p>
                     <p><img className='miniIcons miniIcons--small' src="/musica.png"></img>{cantantes?.name}</p>
+
                     <p><img className='miniIcons miniIcons--small' src="/grabacion.png"></img>{cantantes?.concerts.hour} h</p>
 
                   </div>

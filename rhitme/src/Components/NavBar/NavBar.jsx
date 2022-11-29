@@ -14,9 +14,9 @@ const NavBar = () => {
         <p className='textMenu'>Entradas</p>
         </NavLink>
 
-        <NavLink activeclassname={"active"} className='iconAndText' to="/buscar">
-        <img className='icons' src='/lupa.png'></img>
-        <p className='textMenu'>Buscar</p>
+        <NavLink activeclassname={"active"} className='iconAndText' to="/favoritos">
+        <img className='icons' src='/corazon.png'></img>
+        <p className='textMenu'>Favoritos</p>
         </NavLink>
 
         <NavLink activeclassname={"active"} className='iconAndText' to="/">
@@ -24,7 +24,7 @@ const NavBar = () => {
         <p className='textMenu'>Home</p>
         </NavLink>
 
-        <NavLink  className='iconAndText' to="/conciertos">
+        <NavLink  className='iconAndText' to="/ticketdetail">
         <img className='icons' src='/corchea-musical.png'></img>
         <p className='textMenu'>Mis Conciertos</p>
         </NavLink>
