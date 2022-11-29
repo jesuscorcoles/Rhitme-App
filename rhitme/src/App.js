@@ -11,7 +11,6 @@ import HomePage from './Pages/HomePage/HomePage';
 
 import Bienvenido from "./Pages/Conciertos/Bienvenido/Bienvenido";
 import Conciertos from "./Pages/Entradas/Conciertos/Conciertos";
-import SearchPage from "./Pages/SearchPage/SearchPage";
 import MyConcertsPage from "./Pages/MyConcertsPage/MyConcertsPage";
 import ConfigurationPage from "./Pages/ConfigurationPage/ConfigurationPage";
 
@@ -22,6 +21,7 @@ import React, { useState } from 'react';
 import RegisterPage from "./Pages/RegisterPage/RegisterPage";
 import AuthButton from "./shared/components/AuthButton/AuthButton";
 import RequireAuth from "./shared/components/RequireAuth/RequireAuth";
+import Favoritos from "./Pages/Favoritos/Favoritos";
 
 
 
@@ -42,7 +42,7 @@ function App() {
               <Route path="/loginpage" element={<LoginPage></LoginPage>}></Route>
 
               {/* <Route path="/profile" element={<RequireAuth><HomePage/></RequireAuth>}/> EJEMPLO AUTH */}
-              <Route path="/" element={<HomePage/>}></Route>
+              {/* <Route path="/" element={<HomePage/>}></Route> */}
 
               <Route path="/" element={<RequireAuth><HomePage/></RequireAuth>}></Route>
               
@@ -56,8 +56,11 @@ function App() {
               <Route path="/comprarentradas1/:id" element={<ComprarEntrada1></ComprarEntrada1>}></Route>
               <Route path="/comprarentrada2" element={<ComprarEntrada2></ComprarEntrada2>}></Route>
               <Route path="/compraefectuada" element={<CompraEfectuada></CompraEfectuada>}></Route>
-              <Route path="/ticketdetail" element={<TicketDetail></TicketDetail>}></Route>
+
+              <Route path="//ticketdetail" element={<TicketDetail></TicketDetail>}></Route>
+
               <Route path="/bienvenido" element={<Bienvenido></Bienvenido>}></Route>
+              <Route path="/favoritos" element={<Favoritos></Favoritos>}></Route>
 
             </Routes>
 

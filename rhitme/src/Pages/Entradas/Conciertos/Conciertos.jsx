@@ -21,14 +21,14 @@ export default function Conciertos(){
   return (
     <div>
       <header className='header'>
-          <Link to="/entradas"><Back></Back></Link>
-          <p>Entradas</p>
+          <Link to="/"><Back></Back></Link>
+          <p>Mis Conciertos</p>
           <div className='btnBox'></div>
       </header>
       
       {conciertos&&conciertos?.map((concierto, index) => {
       return(
-        <div className='eventDateImg'>
+        <Link to={`/ticketdetail/${conciertos?._id}`}><div className='eventDateImg'>
           {/* <img src={concierto.image}></img> */}
           <div className='infoboxconciertos' key={index}>
             <h1 className='textSing textSing--title'>{concierto?.name}</h1>
@@ -50,6 +50,7 @@ export default function Conciertos(){
             </div>
           </div>
       </div>
+      </Link>
       )
       })}
       

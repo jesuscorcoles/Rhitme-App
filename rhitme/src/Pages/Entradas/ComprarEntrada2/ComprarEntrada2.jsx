@@ -5,7 +5,7 @@ import Back from '../../../Components/Back/Back';
 
 const ComprarEntrada2 = () => {
   return (
-    <div>
+    <div className='absoluto'>
       <header className='header'>
         <Link to="/comprarentrada1"><Back></Back></Link>
         <p>Entradas</p>

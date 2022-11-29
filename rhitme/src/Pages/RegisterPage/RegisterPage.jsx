@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useForm } from "react-hook-form";
 import { Link } from 'react-router-dom';
+// import { JwtContext } from '../../shared/contexts/JwtContext';
 import { API } from "../../shared/services/api";
 
 export default function RegisterPage () {
     const { register, handleSubmit } = useForm();
+    // const { setJwt } = useContext(JwtContext);
 
     // const user = {
     //     name: 'Abel',
@@ -15,6 +17,7 @@ export default function RegisterPage () {
     const onSubmit = formData => {
         API.post('users/register', formData).then(res => {
             console.log('Register user',);
+            window.location.href="/loginpage"
         })
     }
 

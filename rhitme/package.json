@@ -19,8 +19,7 @@
     "react-scripts": "5.0.1",
     "react-slideshow-image": "^4.0.5",
     "simplebar-react": "^2.4.3",
-    "web-vitals": "^2.1.4",
-    "react-google-maps": "*"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
